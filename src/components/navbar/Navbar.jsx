@@ -23,7 +23,7 @@ function Navbar() {
           <span>Nexus-AI</span>
         </div>
 
-        <ul className="hidden md:flex items-center gap-6">
+        <ul className="hidden md:flex items-center gap-6 border border-border py-2 px-4">
           {navOptions.map((option) => (
             <a href={option.href}>
               <li
