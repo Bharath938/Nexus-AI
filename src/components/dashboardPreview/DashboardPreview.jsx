@@ -14,7 +14,7 @@ function DashboardPreview() {
     { title: "Total Delivery", num: 45, growth: 45 },
   ];
   return (
-    <div className="flex justify-center overflow-hidden">
+    <div className="flex justify-center overflow-hidden shadow-purple-500/10">
       <div className="origin-top scale-80 md:scale-90 lg:scale-90">
         <div className="flex border border-border w-[1000px] rounded-2xl shrink-0">
           <aside className="border-r border-border w-40">
