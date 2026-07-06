@@ -4,6 +4,8 @@ import {
   GiHamburgerMenu,
   IoClose,
 } from "../../assets/icons/index.js";
+import PurpleButton from "../ui/Button/PurpleButton.jsx";
+import Logo from "../nexus-ai-logo/Logo.jsx";
 
 function Navbar() {
   const [hamburgerIsOpen, setHamburgerIsOpen] = useState(false);
@@ -18,11 +20,7 @@ function Navbar() {
   return (
     <>
       <nav className="flex items-center bg-surface justify-between px-4 py-2">
-        <div className="flex items-center cursor-pointer gap-2">
-          <RiSparkling2Fill className="text-primary" />
-          <span>Nexus-AI</span>
-        </div>
-
+        <Logo />
         <ul className="hidden md:flex items-center gap-6 border border-border py-2 px-4">
           {navOptions.map((option) => (
             <a href={option.href}>
@@ -36,14 +34,12 @@ function Navbar() {
           ))}
         </ul>
 
-        <button className="hidden md:block bg-primary hover:bg-primary-hover px-4 py-2 rounded-full text-white cursor-pointer">
-          GET STARTED
-        </button>
+        <PurpleButton buttonText="Get 14 Days Free Trail" />
 
         {hamburgerIsOpen ? (
           <IoClose
             onClick={() => setHamburgerIsOpen((prev) => !prev)}
-            className="cursor-pointer text-xl"
+            className="md:hidden cursor-pointer text-xl"
           />
         ) : (
           <GiHamburgerMenu
@@ -53,7 +49,7 @@ function Navbar() {
         )}
       </nav>
       {hamburgerIsOpen && (
-        <div className="flex flex-col items-center py-4">
+        <div className="lg:hidden flex flex-col items-center py-4">
           <ul className="flex flex-col items-center gap-6">
             {navOptions.map((option) => (
               <a href={option.href}>
@@ -66,9 +62,7 @@ function Navbar() {
               </a>
             ))}
           </ul>
-          <button className="bg-primary hover:bg-primary-hover px-4 py-2 rounded-full text-white mt-4 cursor-pointer">
-            GET STARTED
-          </button>
+          <PurpleButton buttonText="Get 14 Days Free Trail" />
         </div>
       )}
     </>

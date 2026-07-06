@@ -1,7 +1,10 @@
 function StatsCard(props) {
   return (
-    <div className="p-8">
-      <div className="flex flex-col w-32 h-32 gap-1 items-center border border-border w-36 p-4 text-center rounded-xl">
+    <>
+      <div
+        className="flex flex-col w-32 h-32 gap-1 items-center border border-border w-36 
+      p-4 text-center rounded-xl bg-surface"
+      >
         <span className="text-secondary-text text-sm">
           {props.cardContent.title}
         </span>
@@ -13,7 +16,7 @@ function StatsCard(props) {
           </span>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 

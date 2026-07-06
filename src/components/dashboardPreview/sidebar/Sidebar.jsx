@@ -18,7 +18,7 @@ function Sidebar() {
   ];
   return (
     <>
-      <ul className="flex flex-col gap-3 mt-8 text-secondary-text border-r border-border w-40 p-4">
+      <ul className="flex flex-col gap-3 mt-8 text-secondary-text p-4">
         {sidebarOptions.map((option) => (
           <li
             className={`flex gap-3 items-center justify-between ${option.count && "bg-surface"}`}

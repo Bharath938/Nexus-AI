@@ -4,7 +4,7 @@ import WhiteButton from "./ui/Button/WhiteButton";
 function Hero() {
   return (
     <>
-      <main className="flex justify-center items-center flex-col gap-4 min-h-screen">
+      <main className="flex justify-center items-center flex-col gap-4 min-h-[70vh]">
         <div className="flex flex-col gap-4 items-center">
           <div className="flex flex-col gap-4 max-w-140 text-center leading-tight">
             <h1 className="text-2xl md:text-5xl lg:7xl">
